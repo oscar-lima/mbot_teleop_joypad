@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+  <name>mbot_teleop_joypad</name>
+  <version>0.0.1</version>
+  <description>teleoperation for a robot base, capable of accepting base 
+               velovities (typically /cmd_vel) via joypad</description>
+
+  <maintainer email="frederik.hegger@h-brs.de">Frederik Hegger</maintainer>
+  <maintainer email="matthias.fueller@h-brs.de">Matthias Füller</maintainer>
+  <maintainer email="olima@isr.tecnico.ulisboa.pt">Oscar Lima</maintainer>
+
+  <license>GPLv3</license>
+  
+  <author email="frederik.hegger@h-brs.de">Frederik Hegger</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>joy</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>roslint</build_depend>
+  <build_depend>angles</build_depend>
+    
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>joy</run_depend>
+  <run_depend>mbot_teleop_keyboard</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>angles</run_depend>
+  
+  <test_depend>roslaunch</test_depend>
+  
+</package>

@@ -1,0 +1,7 @@
+joypad:
+    buttons:
+        name: [deadman, run]
+        index: [5, 7]
+    axes:
+        name: [base_linear_x, base_linear_y, base_angular_z]
+        index: [1, 0, 3]

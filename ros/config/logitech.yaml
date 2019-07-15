@@ -1,0 +1,7 @@
+joypad:
+    buttons:
+        name: [deadman, run, manual_annotation, reset]
+        index: [5, 7, 1, 4]
+    axes:
+        name: [base_linear_x, base_linear_y, base_angular_z, head_rotation, head_camera_tilt]
+        index: [1, 0, 2, 4, 5]

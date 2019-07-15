@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<launch>
+
+  <!-- configuration for logitech joypad-->
+  <arg name="joypad_cfg_file" default="$(find mbot_teleop_joypad)/ros/config/logitech.yaml"/>
+  
+  <!-- joy node -->
+  <node pkg="joy" type="joy_node" name="joy_node" output="log">
+    <rosparam command="load" file="$(find mbot_teleop_joypad)/ros/config/joy.yaml"/>
+  </node>
+
+  <!-- start youbot teleop node -->
+  <node pkg="mbot_teleop_joypad" type="teleop_joypad_node" name="mbot_teleop_joypad" output="screen">
+    <remap from="~cmd_vel" to="/cmd_vel" />
+    <remap from="~joy" to="/joy" />
+    <rosparam command="load" file="$(arg joypad_cfg_file)"/>
+    <rosparam command="load" file="$(find mbot_teleop_joypad)/ros/config/teleop.yaml"/>  
+  </node>
+
+</launch>
